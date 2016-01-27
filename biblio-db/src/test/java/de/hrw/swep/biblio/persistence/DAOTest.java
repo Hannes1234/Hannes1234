@@ -52,9 +52,7 @@ public class DAOTest {
    */
   @Test
   public void testGetBenutzerByName() {
-    DAO dao = new DAO();
-    Set<BenutzerDTO> b = dao.getBenutzerByName("Berta Brettschneider");
-    assertTrue ();
+  
   }
 
   /** 
