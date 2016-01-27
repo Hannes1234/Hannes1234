@@ -31,7 +31,7 @@ public class DAOTest {
   public void setup() throws Exception {
     databaseTester = new JdbcDatabaseTester("org.hsqldb.jdbcDriver",
         "jdbc:hsqldb:file:../biblio-db/database/bibdb", "sa", "");
-   // databaseTester.setSetUpOperation(new HsqlDatabaseOperation());
+    databaseTester.setSetUpOperation(new HsqlDatabaseOperation());
     databaseTester.setDataSet(new FlatXmlDataSetBuilder().build(new File("full.xml")));
     databaseTester.onSetup();
   }
@@ -52,7 +52,8 @@ public class DAOTest {
    */
   @Test
   public void testGetBenutzerByName() {
-  
+    DAO dao = new DAO();
+    Set<BenutzerDTO> b = dao.getBenutzerByName("Berta Brettschneider");
   }
 
   /** 
